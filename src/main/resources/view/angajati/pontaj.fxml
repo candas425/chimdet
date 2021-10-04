@@ -1,0 +1,33 @@
+<?import javafx.scene.layout.*?>
+<?import javafx.stage.Screen?>
+<?import java.lang.String?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane styleClass="baseDesign" fx:id="pontajAnchorPane" fx:controller="ro.utcn.frontend.controller.angajati.PontajController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <stylesheets>
+        <String fx:value="/view/mainPage.css" />
+        <String fx:value="/view/angajati/pontaj.css" />
+    </stylesheets>
+
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen" />
+    </fx:define>
+
+    <!--MENU-->
+    <MenuBar prefWidth="${screen.visualBounds.width}">
+        <Menu text="Meniu">
+            <MenuItem text="Home" onAction="#homeAction"/>
+            <MenuItem text="Angajati" onAction="#backAngajati"/>
+            <MenuItem text="Exit" onAction="#exitAction"/>
+        </Menu>
+    </MenuBar>
+
+    <Button styleClass="buttonClass" layoutY="30" layoutX="15" text="Declara zile libere" onAction="#zileLibere"/>
+    <Button styleClass="buttonClass" layoutY="30" layoutX="145" text="Genereaza pontaj" onAction="#generarePontaj"/>
+
+</AnchorPane>

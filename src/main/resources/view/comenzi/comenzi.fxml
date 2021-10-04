@@ -1,0 +1,29 @@
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.stage.Screen?>
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane styleClass="baseDesign" fx:controller="ro.utcn.frontend.controller.comenzi.ComenziController"
+            xmlns:fx="http://javafx.com/fxml" hbarPolicy="NEVER">
+    <stylesheets>
+        <String fx:value="/view/mainPage.css"/>
+        <String fx:value="/view/comenzi/comenzi.css"/>
+    </stylesheets>
+
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen"/>
+    </fx:define>
+
+    <AnchorPane styleClass="baseDesign comenziDesign" fx:id="comenziAnchorPane">
+        <!--MENU-->
+        <MenuBar prefWidth="${screen.visualBounds.width}">
+            <Menu text="Meniu">
+                <MenuItem text="Home" onAction="#homeAction"/>
+                <MenuItem text="Exit" onAction="#exitAction"/>
+            </Menu>
+        </MenuBar>
+    </AnchorPane>
+</ScrollPane>

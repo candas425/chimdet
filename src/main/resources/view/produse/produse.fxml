@@ -1,0 +1,35 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.stage.Screen?>
+<?import java.lang.String?>
+<AnchorPane styleClass="baseDesign" fx:id="produseAnchorPane" fx:controller="ro.utcn.frontend.controller.produse.ProduseController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <stylesheets>
+        <String fx:value="/view/mainPage.css" />
+        <String fx:value="/view/produse/produse.css" />
+    </stylesheets>
+
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen" />
+    </fx:define>
+
+    <!--MENU-->
+    <MenuBar prefWidth="${screen.visualBounds.width}">
+        <Menu text="Meniu">
+            <MenuItem text="Home" onAction="#homeAction"/>
+            <MenuItem text="Exit" onAction="#exitAction"/>
+        </Menu>
+        <Menu text="Actiuni">
+            <MenuItem text="Importa produse" onAction="#importaProduse"/>
+            <MenuItem text="Exporta produse" onAction="#exportaProduse"/>
+        </Menu>
+    </MenuBar>
+
+    <!--Butoane-->
+    <Button styleClass="buttonClass" layoutY="30" layoutX="15" text="Adauga" onAction="#adaugaProdus"/>
+    <Button styleClass="buttonClass" layoutY="30" layoutX="90" text="Sterge" onAction="#stergeProdus"/>
+    <Label layoutX="160" layoutY="35" text="Filtreaza tabelul dupa numele produsului:" />
+    <TextField fx:id="filterField" layoutY="30" layoutX="385"/>
+
+</AnchorPane>

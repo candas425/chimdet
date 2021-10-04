@@ -1,0 +1,54 @@
+.buttonClass{
+    -fx-background-color:
+            #000000,
+            linear-gradient(#7ebcea, #2f4b8f),
+            linear-gradient(#426ab7, #263e75),
+            linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 6 15 6 15;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+.buttonClass Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+
+.table-view{
+    -fx-selection-bar-non-focused: #008287 ;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 25;
+    -fx-border-width: 0 0 0 0;
+    -fx-text-fill: black;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent rgba(255,255,255,0.3) transparent;
+    -fx-border-width: 1;
+    -fx-background-insets: 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 13px;
+    -fx-font-family: Arial, Helvetica, sans-serif;
+    -fx-text-fill: black;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+.table-cell {
+    -fx-font-stretch: ultra-condensed;
+    -fx-font-weight: normal;
+    -fx-font-size: 15.7px;
+    -fx-font-family: Arial Narrow, sans-serif;
+    -fx-alignment: center-left;
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-text-fill: black;
+    -fx-border-width: 0.3;
+}

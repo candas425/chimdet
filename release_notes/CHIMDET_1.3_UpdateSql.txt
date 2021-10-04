@@ -1,0 +1,2 @@
+alter table firma drop column LAST_RESET_TIME;
+alter table comanda add column AVAILABLE_TABLE_COMANDA bool default false;

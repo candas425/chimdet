@@ -1,0 +1,43 @@
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.stage.Screen?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<AnchorPane styleClass="baseDesign" fx:id="comandaListaAnchorPane" fx:controller="ro.utcn.frontend.controller.comenzi.ComandaListaController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <stylesheets>
+        <String fx:value="/view/mainPage.css" />
+        <String fx:value="/view/comenzi/comandaLista.css" />
+    </stylesheets>
+
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen" />
+    </fx:define>
+
+    <!--MENU-->
+    <MenuBar prefWidth="${screen.visualBounds.width}">
+        <Menu text="Meniu">
+            <MenuItem text="Home" onAction="#homeAction"/>
+            <MenuItem text="Comenzi" onAction="#comenziAction"/>
+            <MenuItem text="Exit" onAction="#exitAction"/>
+        </Menu>
+        <Menu text="Actiuni">
+            <MenuItem text="Istoric" onAction="#istoricAction"/>
+        </Menu>
+    </MenuBar>
+
+    <Label styleClass="textForLabels" layoutX="16" layoutY="62" text="Text cautat:" />
+    <Label fx:id="textCautat" styleClass="textForSearchLabel" layoutX="100" layoutY="62"/>
+    <Label styleClass="textForLabels" layoutX="670" layoutY="30" text="Produse din command" />
+
+    <Button layoutX="532" layoutY="400" text="Adauga comanda" styleClass="buttonClass" onAction="#adaugaComanda"/>
+    <Button layoutX="672" layoutY="400" text="Goleste comanda" styleClass="buttonClass" onAction="#golesteComanda"/>
+    <Button layoutX="808" layoutY="400" text="Sterge produsul" styleClass="buttonClass" onAction="#stergeProdusul"/>
+
+</AnchorPane>

@@ -1,0 +1,18 @@
+/*comanda*/
+alter table comanda drop foreign key FKs3udydfw0m9lpaf81leiw6it7;
+alter table comanda drop column client;
+drop table client;
+alter table lista_produse_comanda change column Comanda_ID Command_ID int(11);
+
+/*factura*/
+alter table factura drop foreign key FK41p90lr2iri4s9upumsbu29p8;
+alter table factura drop foreign key FK952sk1c3e61kg4r6n8ldlhx4m;
+alter table factura drop foreign key FKivtsvhwnfmwvgptrexnqxe0q3;
+drop table lista_produse_factura;
+drop table factura;
+
+/*firma*/
+alter table firma drop column banca;
+
+/*setaregenerala*/
+DELETE FROM `chimdet`.`setaregenerala` WHERE `ID`='14';

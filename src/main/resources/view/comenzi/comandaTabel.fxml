@@ -1,0 +1,40 @@
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.stage.Screen?>
+<?import javafx.scene.control.Button?>
+<AnchorPane styleClass="baseDesign" fx:id="comandaTabelAnchoPane" fx:controller="ro.utcn.frontend.controller.comenzi.ComandaTabelController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <stylesheets>
+        <String fx:value="/view/mainPage.css" />
+        <String fx:value="/view/comenzi/comandaTabel.css" />
+    </stylesheets>
+
+    <fx:define>
+        <Screen fx:factory="getPrimary" fx:id="screen" />
+    </fx:define>
+
+    <!--MENU-->
+    <MenuBar prefWidth="${screen.visualBounds.width}">
+        <Menu text="Meniu">
+            <MenuItem text="Home" onAction="#homeAction"/>
+            <MenuItem text="Comenzi" onAction="#comenziAction"/>
+            <MenuItem text="Exit" onAction="#exitAction"/>
+        </Menu>
+        <Menu text="Actiuni">
+            <MenuItem text="Istoric" onAction="#istoricAction"/>
+        </Menu>
+    </MenuBar>
+
+    <Button layoutX="15" layoutY="30" text="Resetare totala" styleClass="buttonClass" onAction="#stergereTotala"/>
+    <Button layoutX="132" layoutY="30" text="Printeaza" styleClass="buttonClass" onAction="#printare"/>
+    <Button layoutX="216" layoutY="30" text="Cantitate oras" styleClass="buttonClass" onAction="#cantitateOras"/>
+    <Button layoutX="328" layoutY="30" text="Resetare oras" styleClass="buttonClass" onAction="#resetareOras"/>
+
+</AnchorPane>
